@@ -27,9 +27,12 @@ function App() {
 
   function handleClick(event) {
     event.preventDefault()
-    formData.password === formData.confirm_pwd ?
-        console.log('Successfully signed up') :
+    if(formData.password === formData.confirm_pwd){
+      console.log('Successfully signed up')
+  } else {
       console.log('Failed to sign up')
+      return
+  }
     
    formData.isJoined ? console.log('Thanks for signing up for our newsletter!') : console.log('')
 }
